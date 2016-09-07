@@ -2,10 +2,12 @@
     class Place
     {
         private $placeName;
+        private $placeYear;
 
-        function __construct($placeName)
+        function __construct($placeName, $placeYear)
         {
             $this->placeName = $placeName;
+            $this->placeYear = $placeYear;
         }
 
         function setName($new_name)
@@ -16,6 +18,11 @@
         function getName()
         {
             return $this->placeName;
+        }
+
+        function getYear()
+        {
+            return $this->placeYear;
         }
 
         function savePlace()

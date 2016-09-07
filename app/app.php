@@ -20,7 +20,7 @@
     });
 
     $app->post("/places", function() use ($app) {
-        $place = new Place($_POST['placeName']);
+        $place = new Place($_POST['placeName'],$_POST['placeYear']);
         $place->savePlace();
         return $app['twig']->render('new_place.html.twig', array('newplace' => $place));
     });

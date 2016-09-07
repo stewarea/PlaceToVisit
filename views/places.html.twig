@@ -9,7 +9,7 @@
         <p>Here are all your places:</p>
         <ul>
             {% for place in places %}
-                <li>{{ place.getName }}</li>
+                <li>{{ place.getName }}: Visited in {{ place.getYear}}</li>
             {% endfor %}
         </ul>
     {% endif %}
@@ -17,6 +17,9 @@
     <form action='/places' method='post'>
         <label for='placeName'>Where Is This Place?</label>
         <input id='placeName' name='placeName' type='text'>
+        <br>
+        <label for='placeYear'>When Did You Visit This Place?</label>
+        <input id='placeYear' name='placeYear' type='number'>
         <button type='submit'>Add Place</button>
     </form>
     <form action='/clear_places' method='post'>
